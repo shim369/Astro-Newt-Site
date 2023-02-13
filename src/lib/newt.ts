@@ -7,7 +7,7 @@ export interface Article {
 }
 
 export const newtClient = createClient({
-  spaceUid: import.meta.env.NEWT_SPACE_UID + '',
-  token: import.meta.env.NEWT_CDN_API_TOKEN + '',
-  apiType: 'cdn',
+	spaceUid: import.meta.env.NEWT_SPACE_UID + '',
+	token: import.meta.env.NEWT_CDN_API_TOKEN + '',
+	apiType: 'cdn',
 })
