@@ -7,8 +7,15 @@
 	justify-content: space-around;
 	align-items: flex-start;
 	margin-top: 50px;
+	@media (max-width: 640px) {
+		flex-direction: column;
+		align-items: center;
+	}
 	.flex-text {
 		width: 45%;
+		@media (max-width: 640px) {
+			width: 100%;
+		}
 		h2 {
 			margin-bottom: 15px;
 			text-align: left;
@@ -20,10 +27,14 @@
 	}
 	.flex-img {
 		width: 45%;
+		margin-bottom: 20px;
+		@media (max-width: 640px) {
+			width: 100%;
+		}
 		img {
 			width: 100%;
 			height: 400px;
-			object-fit: contain;
+			object-fit: cover;
 		}
 	}
 }
@@ -46,9 +57,9 @@
 			justify-content: space-around;
 			margin-bottom: 40px;
 			width: 46%;
-			// &:nth-child(2n) {
-			// 	flex-direction: row-reverse;
-			// }
+			@media (max-width: 640px) {
+				width: 100%;
+			}
 			.skills-img {
 				width: 200px;
 				height: 200px;
@@ -66,7 +77,8 @@
 				}
 				p {
 					text-align: left;
-					font-size: 1.2em;
+					font-size: 1em;
+					line-height: 1.5;
 				}
 			}
 		}
@@ -77,8 +89,15 @@
 	display: flex;
 	justify-content: space-around;
 	margin-top: 40px;
+	@media (max-width: 640px) {
+		flex-direction: column;
+	}
 	.blog-card {
 		width: 30%;
+		@media (max-width: 640px) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
 		img {
 			width: 100%;
 			height: 200px;

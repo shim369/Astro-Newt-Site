@@ -60,11 +60,16 @@ header {
 	background: url("../img/bg1.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
-	border-radius:0 0 50% 50%;
+	border-radius: 0 0 50% 50%;
 	width: 100%;
 	height: 100vh;
 	z-index: 1;
 	position: relative;
+	transition: all .5s ease;
+	@media (max-width: 640px) {
+		border-radius: 0;
+		height: 80vh;
+	}
 	&::after {
 		position: absolute;
 		top: 0;
@@ -75,6 +80,9 @@ header {
 		height: 100vh;
 		background-color: rgba($color: #161515, $alpha: .3);
 		z-index: 2;
+		@media (max-width: 640px) {
+			height: 80vh;
+		}
 	}
 	.header-inner {
 		width: 100%;
@@ -119,10 +127,13 @@ header {
 			position: absolute;
 			a {
 				color: #ffe300;
-				font-size: 5em;
+				font-size: 4em;
 				font-weight: bold;
 				text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
 				transition: all .5s ease;
+				@media (max-width: 640px) {
+					font-size: 3em;
+				}
 			}
 		}
 		nav {
@@ -140,7 +151,7 @@ header {
 					}
 					a {
 						display: block;
-						padding: 20px;
+						padding: 25px 30px;
 						color: #fff;
 						font-weight: bold;
 						background: #16151569;
@@ -163,11 +174,15 @@ header {
 	z-index: 3;
 	position: relative;
 	li {
-		margin: 0 10px;
+		margin: 0 5px;
 		img {
-			width: 80px;
-			height: 80px;
+			width: 60px;
+			height: 60px;
 			object-fit: cover;
+			@media (max-width: 640px) {
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 }
@@ -176,6 +191,10 @@ header {
 	max-width: 1400px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 2%;
+	@media (max-width: 640px) {
+		width: 100%;
+	}
 }
 
 .date {

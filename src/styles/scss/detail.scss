@@ -7,10 +7,16 @@
 	font-size: 3em;
 	font-weight: bold;
 	color: #ffe300;
+	@media (max-width: 640px) {
+		font-size: 2em;
+	}
 }
 .blog-detail-area {
-	max-width: 80%;
+	max-width: 85%;
 	margin: 0 auto;
+	@media (max-width: 640px) {
+		max-width: 100%;
+	}
 	.blog-content {
 		padding: 50px 3%;
 		h1 {
