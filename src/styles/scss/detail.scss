@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import '_common';
+
+.blog-detail-title {
+	text-align: center;
+	margin-bottom: 50px;
+	font-size: 3em;
+	font-weight: bold;
+	color: #ffe300;
+}
+.blog-detail-area {
+	max-width: 80%;
+	margin: 0 auto;
+	.blog-content {
+		padding: 50px 3%;
+		h1 {
+			text-align: left;
+			color: #fff;
+			font-size: 2em;
+		}
+		.date {
+			font-size: 1.2em;
+			margin-bottom: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			line-height: 1;
+		}
+		img {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		p {
+			margin-bottom: 30px;
+			font-size: 1.3em;
+		}
+			
+	}
+}

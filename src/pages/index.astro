@@ -2,29 +2,127 @@
 import Layout from '../layouts/Layout.astro'
 import { newtClient } from '../lib/newt'
 import type { Article } from '../lib/newt'
-
+import '../styles/css/index.css';
 const { items: articles } = await newtClient.getContents<Article>({
   appUid: 'blog',
   modelUid: 'article',
   query: {
-    select: ['title', 'slug', 'body'],
+	select: ["title", "slug", "body", "coverImage", "date", "tags", "pick", "articlePhoto","fileName", "height"],
   },
 })
 ---
 <Layout title="Articles">
-	<main>
-		<ul>
-			{
-			  articles.map((article) => {
-				return (
-				  <li>
-					<a href={`/articles/${article.slug}`}>{article.title}</a>
-				  </li>
-				)
-			  })
-			}
-		  </ul>
-	</main>
+	<section id="a01">
+		<div class="container">
+			<div class="flex-box">
+				<div class="flex-text">
+					<h1>Profile</h1>	
+					<p class="read">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit laborum maiores, velit ipsam cumque dolores, voluptate, nihil sint deleniti in voluptates veniam adipisci itaque error aut. Laboriosam, aliquid quibusdam?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit laborum maiores, velit ipsam cumque dolores, voluptate, nihil sint deleniti in voluptates veniam adipisci itaque error aut. Laboriosam, aliquid quibusdam?</p>
+				</div>
+				<div class="flex-img">
+					<img src="img/prof.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="skills bg-architect" id="a02">
+		<div class="container">
+			<h1>Skills</h1>
+			<p class="read">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<ul class="skills-detail">
+				<li>
+					<div class="skills-img">
+						<img src="img/astro.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>Astro</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+				<li>
+					<div class="skills-img">
+						<img src="img/js.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>JavaScript</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+				<li>
+					<div class="skills-img">
+						<img src="img/next.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>Next.js</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+				<li>
+					<div class="skills-img">
+						<img src="img/nuxt.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>Nuxt.js</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+				<li>
+					<div class="skills-img">
+						<img src="img/py.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>Python</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+				<li>
+					<div class="skills-img">
+						<img src="img/figma.png" alt="">
+					</div>
+					<div class="skills-text">
+						<h2>Figma</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="a03">
+		<div class="container">
+			<h1>Blog</h1>
+			<p class="read">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+			<div class="blog-area">
+				{
+					articles.map((article) => {
+						return (
+						<>
+							<div class="blog-card">
+								<img src={article.coverImage ? article.coverImage.src : ""} />
+								<div class="date"><span class="material-symbols-outlined">schedule</span>{article.date}</div>
+								<h2>{article.title}</h2>
+								<a href={`/articles/${article.slug}`} class="btn-s">Read more</a>
+							</div>
+						</>
+						)
+					})
+				}
+			</div>
+		</div>
+	</section>
+	<section class="bg-architect" id="a04">
+		<div class="container">
+			<div class="contact">
+				<h1>Contact</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<div class="contact-logo">
+					TECH BASE
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
 
 <style>

@@ -4,6 +4,8 @@ export interface Article {
 	title: string
 	slug: string
 	body: string
+	coverImage: HTMLImageElement
+	date: Date
 }
 
 export const newtClient = createClient({
