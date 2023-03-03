@@ -38,7 +38,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>Astro</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 				<li>
@@ -47,7 +47,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>JavaScript</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 				<li>
@@ -56,7 +56,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>Next.js</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 				<li>
@@ -65,7 +65,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>Nuxt.js</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 				<li>
@@ -74,7 +74,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>Python</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 				<li>
@@ -83,7 +83,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					</div>
 					<div class="skills-text">
 						<h2>Figma</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero! Doloribus explicabo magnam corrupti ad modi. </p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facere voluptates libero!</p>
 					</div>
 				</li>
 			</ul>
@@ -100,7 +100,8 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<>
 							<div class="blog-card">
 								<img src={article.coverImage ? article.coverImage.src : ""} />
-								<div class="date"><span class="material-symbols-outlined">schedule</span>{article.date}</div>
+								<div class="date"><span class="material-symbols-outlined">schedule</span>
+								{ new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(new Date(article.date))}</div>
 								<h2>{article.title}</h2>
 								<a href={`/articles/${article.slug}`} class="btn-s">Read more</a>
 							</div>
