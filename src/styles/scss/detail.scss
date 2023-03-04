@@ -23,6 +23,9 @@
 			text-align: left;
 			color: #fff;
 			font-size: 2em;
+			@media (max-width: 640px) {
+				font-size: 1.4em;
+			}
 		}
 		.date {
 			font-size: 1.2em;
@@ -39,6 +42,9 @@
 		p {
 			margin-bottom: 30px;
 			font-size: 1.3em;
+			@media (max-width: 640px) {
+				font-size: 1em;
+			}
 		}
 			
 	}
