@@ -7,11 +7,11 @@ const { items: articles } = await newtClient.getContents<Article>({
   appUid: 'blog',
   modelUid: 'article',
   query: {
-	select: ["title", "slug", "body", "coverImage", "date", "tags", "pick", "articlePhoto","fileName", "height"],
+	select: ["title", "slug", "body", "coverImage", "category", "date"],
   },
 })
 ---
-<Layout title="Articles">
+<Layout title="TECH BASE">
 	<section id="a01">
 		<div class="container">
 			<h1>Profile</h1>
@@ -99,7 +99,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 						return (
 						<>
 							<div class="blog-card">
-								<img src={article.coverImage ? article.coverImage.src : ""} />
+								<div class="img-category">
+									<img src={article.coverImage ? article.coverImage.src : ""} />
+									<h3>{article.category.name}</h3>
+								</div>
 								<div class="date"><span class="material-symbols-outlined">schedule</span>
 								{ new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(new Date(article.date))}</div>
 								<h2>{article.title}</h2>
@@ -126,6 +129,14 @@ const { items: articles } = await newtClient.getContents<Article>({
 	</section>
 </Layout>
 
-<style>
+<script is:inline>
+let headerInner = document.querySelector(".header-inner");
 
-</style>
+window.addEventListener("scroll", () => {
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		headerInner.classList.add("active");
+	} else {
+		headerInner.classList.remove("active");
+	}
+})
+</script>

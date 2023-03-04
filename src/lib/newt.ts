@@ -5,6 +5,9 @@ export interface Article {
 	slug: string
 	body: string
 	coverImage: HTMLImageElement
+	category: {
+		name: string
+	}
 	date: Date
 }
 
