@@ -140,6 +140,9 @@ header {
 			position: absolute;
 			right: 0;
 			top: 0;
+			@media (max-width: 640px) {
+				display: none;
+			}
 			ul {
 				display: flex;
 				li {
