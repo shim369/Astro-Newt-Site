@@ -60,13 +60,13 @@ const { title } = Astro.props;
 	</body>
 </html>
 <script is:inline>
-let headerInner = document.querySelector(".header-inner");
+let header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-		headerInner.classList.add("active");
+		header.classList.add("active");
 	} else {
-		headerInner.classList.remove("active");
+		header.classList.remove("active");
 	}
 })
 
