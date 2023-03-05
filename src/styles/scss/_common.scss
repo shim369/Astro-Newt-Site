@@ -93,9 +93,6 @@ header {
 	z-index: 1;
 	position: relative;
 	transition: all .5s ease;
-	@media (max-width: 800px) {
-		border-radius: 0;
-	}
 	&.active {
 		border-radius: 0;
 		.header-inner {

@@ -27,10 +27,10 @@
 	}
 	.flex-img {
 		width: 45%;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		text-align: center;
 		@media (max-width: 640px) {
-			width: 100%;
+			width: 80%;
 		}
 		img {
 			width: 400px;
@@ -60,6 +60,7 @@
 			width: 46%;
 			@media (max-width: 640px) {
 				width: 100%;
+				margin-bottom: 20px;
 			}
 			&:hover {
 				color: #ffe300;
