@@ -96,25 +96,12 @@
 	}
 }
 
-.bg-blog {
+.bg-yellow {
 	background: #ffe300;
 	color: #161515;
 	h1 {
 		color: #161515;
 	}
-	.btn-s {
-		color: #161515;
-		border: solid 1px #161515;
-		padding: 10px 20px;
-		margin-top: 15px;
-		display: inline-block;
-		transition: all .5s ease;
-		&:hover {
-			border: solid 1px #161515;
-			background: #161515;
-			color: #ffe300;
-		}
-}
 }
 
 .blog-area {
@@ -187,7 +174,37 @@
 	.contact-logo {
 		text-align: center;
 		margin-top: 30px;
-		color: #ffe300;
+		color: #161515;
 		font-size: 1.5em;
+		font-weight: bold;
+	}
+	.form-box {
+		max-width: 500px;
+		margin: 40px auto;
+		.form-item {
+			width: 100%;
+			input {
+				color: #161719;
+				background: #d8c001;
+				font-size: 15px;
+				transition: all .3s;
+				padding: 13px;
+				width: 100%;
+				border: none;
+				margin-bottom: 20px;
+				font-weight: normal;
+			}
+			textarea {
+				color: #161719;
+				background: #d8c001;
+				font-size: 15px;
+				transition: all .3s;
+				padding: 13px;
+				width: 100%;
+				border: none;
+				min-height: 150px;
+				font-weight: normal;
+			}
+		}
 	}
 }

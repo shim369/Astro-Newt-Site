@@ -90,7 +90,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 			</ul>
 		</div>
 	</section>
-	<section class="bg-blog" id="a03">
+	<section id="a03">
 		<div class="container">
 			<h1>Blog</h1>
 			<p class="read">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -116,14 +116,23 @@ const { items: articles } = await newtClient.getContents<Article>({
 			</div>
 		</div>
 	</section>
-	<section class="bg-architect" id="a04">
+	<section class="bg-yellow" id="a04">
 		<div class="container">
 			<div class="contact">
 				<h1>Contact</h1>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+				<form class="form-box" action="" method="post">
+					<div class="form-item">
+						<input type="text" placeholder="Subject">
+						<input type="text" placeholder="E-mail">
+						<textarea name="message" placeholder="Message"></textarea>
+					</div>
+				</form>
+
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 				<div class="contact-logo">
-					TECH BASE
+					ASTRO BASE
 				</div>
 			</div>
 		</div>
