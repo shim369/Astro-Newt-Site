@@ -66,10 +66,17 @@
 					width: 100%;
 					height: auto;
 					object-fit: contain;
+					filter: grayscale(300%) brightness(60%);
+					&:hover {
+						filter: none;
+					}
 				}
 			}
 			.skills-text {
 				width: 70%;
+				&:hover {
+					color: #ffe300;
+				}
 				h2 {
 					margin-bottom: 10px;
 				}
