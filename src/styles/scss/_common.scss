@@ -204,7 +204,6 @@ header {
 	color: #ffe300;
 	display: none;
 	width: 100%;
-    height: 100%;
 	@media (max-width: 800px) {
 		display: block;
 	}
@@ -222,6 +221,7 @@ header {
 			margin-bottom: 20px;
 			a {
 				color: #ffe300;
+				font-size: 1.5em;
 			}
 		}
 	}
@@ -264,21 +264,23 @@ header {
 	header .header-inner.active .logo a {
 			background: transparent;
 	}
-	.sp-nav-btn {
-		background: transparent;
-	}
-	.sp-nav {
-		visibility: visible;
-		opacity: 1;
-	}
-	.sp-nav-btn {
-		z-index: 999;
-		.material-icons {
-			&.menu-icon {
-				display: none;
-			}
-			&.close-icon {
-				display: block;
+	.sp-nav-area {
+		display: block;
+		height: 100%;
+		.sp-nav {
+			visibility: visible;
+			opacity: 1;
+		}
+		.sp-nav-btn {
+			background: transparent;
+			z-index: 999;
+			.material-icons {
+				&.menu-icon {
+					display: none;
+				}
+				&.close-icon {
+					display: block;
+				}
 			}
 		}
 	}
