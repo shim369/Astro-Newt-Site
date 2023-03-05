@@ -14,14 +14,16 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{ title }</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 	<body id="top">
 		<div class="wrapper">
 			<header>
 				<div class="header-inner">
 					<div class="logo"><a href="/">TECH BASE</a></div>
-					<nav>
-						<ul>
+					<nav class="pc-nav">
+						<ul class="header-lists">
 							<li><a href="/#top">Home</a></li>
 							<li><a href="/#a01">Profile</a></li>
 							<li><a href="/#a02">Skills</a></li>
@@ -29,6 +31,15 @@ const { title } = Astro.props;
 							<li><a href="/#a04">Contact</a></li>
 						</ul>
 					</nav>
+					<div class="sp-nav-area">
+						<div class="sp-nav-btn">
+							<span class="material-icons menu-icon">menu</span>
+							<span class="material-icons close-icon">close</span>
+						</div>
+						<nav class="sp-nav">
+
+						</nav>
+					</div>
 				</div>
 				<ul class="skills-logo">
 					<li><img src="/img/astro.png" alt=""></li>
@@ -48,3 +59,27 @@ const { title } = Astro.props;
 		</div>
 	</body>
 </html>
+<script is:inline>
+let headerInner = document.querySelector(".header-inner");
+
+window.addEventListener("scroll", () => {
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		headerInner.classList.add("active");
+	} else {
+		headerInner.classList.remove("active");
+	}
+})
+
+let nav = document.querySelector('.header-lists');
+let spNav = document.querySelector('.sp-nav');
+spNav.appendChild(nav.cloneNode(true));
+
+let body = document.querySelector('body');
+let menuBtn = document.querySelector('.sp-nav-btn');
+menuBtn.addEventListener('click', () => {
+	body.classList.toggle('side-open');
+})
+menu.addEventListener('click', () => {
+	body.classList.remove('side-open');
+})
+</script>

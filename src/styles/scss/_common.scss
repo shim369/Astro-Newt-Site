@@ -1,4 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&display=swap');
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+	url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+	url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 19px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
 
 * {
 	margin: 0;
@@ -66,9 +95,8 @@ header {
 	z-index: 1;
 	position: relative;
 	transition: all .5s ease;
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		border-radius: 0;
-		height: 80vh;
 	}
 	&::after {
 		position: absolute;
@@ -80,13 +108,10 @@ header {
 		height: 100vh;
 		background-color: rgba($color: #161515, $alpha: .3);
 		z-index: 2;
-		@media (max-width: 640px) {
-			height: 80vh;
-		}
 	}
 	.header-inner {
 		width: 100%;
-		height: 70vh;
+		height: 100vh;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -107,9 +132,12 @@ header {
 					padding: 20px;
 					font-size: 1em;
 					background: #16151569;
+					@media (max-width: 640px) {
+						padding: 10px;
+					}
 				}
 			}
-			nav {
+			.pc-nav {
 				position: fixed;
 				top: 0;
 				right: 0;
@@ -136,10 +164,11 @@ header {
 				}
 			}
 		}
-		nav {
+		.pc-nav {
 			position: absolute;
 			right: 0;
 			top: 0;
+			display: block;
 				@media (max-width: 800px) {
 					display: none;
 				}
@@ -170,12 +199,98 @@ header {
 }
 
 
+.sp-nav-area {
+	position: relative;
+	color: #fff;
+	display: none;
+	width: 100%;
+    height: 100%;
+	@media (max-width: 800px) {
+		display: block;
+	}
+	.header-lists {
+		position: absolute;
+		@media (max-width: 800px) {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		li {
+			margin-bottom: 20px;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.sp-nav-btn {
+    position: fixed;
+	top: 0;
+	right: 0;
+	background: #16151569;
+	padding: 10px;
+	.material-icons {
+		&.menu-icon {
+			display: block;
+		}
+		&.close-icon {
+			display: none;
+		}
+	}
+}
+
+.sp-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .5s ease;
+}
+
+.side-open {
+	header .header-inner.active .logo a {
+			background: transparent;
+	}
+	.sp-nav-btn {
+		background: transparent;
+	}
+	.sp-nav {
+		visibility: visible;
+		opacity: 1;
+	}
+	.sp-nav-btn {
+		z-index: 999;
+		.material-icons {
+			&.menu-icon {
+				display: none;
+			}
+			&.close-icon {
+				display: block;
+			}
+		}
+	}
+}
+
 .skills-logo {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 3;
 	position: relative;
+	top: -120px;
 	li {
 		margin: 0 5px;
 		img {
