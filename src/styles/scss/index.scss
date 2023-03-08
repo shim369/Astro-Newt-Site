@@ -164,6 +164,7 @@
 }
 
 .contact {
+	text-align: center;
 	h1 {
 		margin-bottom: 30px;
 
@@ -205,6 +206,22 @@
 				border: none;
 				min-height: 150px;
 				font-weight: normal;
+			}
+			button {
+				color: #ffe300;
+				background: #161515;
+				border: solid 1px #161515;
+				padding: 10px 20px;
+				margin-top: 15px;
+				display: inline-block;
+				transition: all .5s ease;
+				cursor: pointer;
+				&:hover {
+					border: solid 1px #161515;
+					background-image: linear-gradient(to right bottom, #ffe300, #fde31e, #fbe42d, #fae439, #f8e443);
+					color: #161515;
+					background: transparent;
+				}
 			}
 		}
 	}
