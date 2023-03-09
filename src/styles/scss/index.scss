@@ -7,13 +7,13 @@
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 50px;
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		flex-direction: column;
 		align-items: center;
 	}
 	.flex-text {
 		width: 50%;
-		@media (max-width: 640px) {
+		@media (max-width: 800px) {
 			width: 100%;
 		}
 		h2 {
@@ -29,7 +29,7 @@
 		width: 45%;
 		margin-bottom: 30px;
 		text-align: center;
-		@media (max-width: 640px) {
+		@media (max-width: 800px) {
 			width: 80%;
 		}
 		img {
@@ -58,7 +58,7 @@
 			justify-content: space-around;
 			margin-bottom: 40px;
 			width: 46%;
-			@media (max-width: 640px) {
+			@media (max-width: 800px) {
 				width: 100%;
 				margin-bottom: 20px;
 			}
@@ -109,12 +109,12 @@
 	display: flex;
 	justify-content: space-around;
 	margin-top: 40px;
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		flex-direction: column;
 	}
 	.blog-card {
 		width: 30%;
-		@media (max-width: 640px) {
+		@media (max-width: 800px) {
 			width: 100%;
 			margin-bottom: 40px;
 		}

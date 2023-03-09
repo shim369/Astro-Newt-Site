@@ -7,14 +7,14 @@
 	font-size: 3em;
 	font-weight: bold;
 	color: #ffe300;
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		font-size: 2em;
 	}
 }
 .blog-detail-area {
 	max-width: 85%;
 	margin: 0 auto;
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		max-width: 100%;
 	}
 	.blog-content {
@@ -23,7 +23,7 @@
 			text-align: left;
 			color: #fff;
 			font-size: 2em;
-			@media (max-width: 640px) {
+			@media (max-width: 800px) {
 				font-size: 1.4em;
 			}
 		}
@@ -38,14 +38,14 @@
 		img {
 			width: 100%;
 			margin-bottom: 30px;
-			@media (max-width: 640px) {
+			@media (max-width: 800px) {
 				margin-bottom: 20px;
 			}
 		}
 		p {
 			margin-bottom: 30px;
 			font-size: 1.3em;
-			@media (max-width: 640px) {
+			@media (max-width: 800px) {
 				font-size: 1.2em;
 			}
 		}
