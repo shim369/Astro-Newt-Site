@@ -275,13 +275,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	color: #ffe300;
-	font-size: 4em;
+	font-size: 5em;
 	z-index: 3;
 	position: relative;
-	top: 50%;
+	top: 35%;
 	font-weight: 900;
+	text-align: center;
 	@media (max-width: 800px) {
-		font-size: 2em;
+		font-size: 4.5em;
 	}
 }
 
@@ -291,13 +292,14 @@ header {
 	justify-content: center;
 	z-index: 3;
 	position: relative;
-	top: 55%;
+	top: 45%;
 	li {
 		margin: 0 5px;
 		img {
 			width: 60px;
 			height: 60px;
 			object-fit: cover;
+			border-radius: 50%;
 			@media (max-width: 800px) {
 				width: 40px;
 				height: 40px;
