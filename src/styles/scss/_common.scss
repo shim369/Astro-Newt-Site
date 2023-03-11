@@ -140,6 +140,7 @@ header {
 				padding: 20px;
 				display: block;
 				transition: all .3s ease;
+				text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
 				@media (max-width: 800px) {
 					padding: 10px;
 				}
@@ -281,6 +282,7 @@ header {
 	top: 35%;
 	font-weight: 900;
 	text-align: center;
+	text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
 	@media (max-width: 800px) {
 		font-size: 4.5em;
 	}
