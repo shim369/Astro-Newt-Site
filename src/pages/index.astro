@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
 import Contact from '../components/Contact.astro'
 import { newtClient } from '../lib/newt'
 import type { Article } from '../lib/newt'
@@ -13,6 +14,8 @@ const { items: articles } = await newtClient.getContents<Article>({
 })
 ---
 <Layout title="ASTRO BASE">
+	<Header />
+	<main>
 	<section id="a01">
 		<div class="container">
 			<h1>About</h1>
@@ -130,5 +133,6 @@ const { items: articles } = await newtClient.getContents<Article>({
 			</div>
 		</div>
 	</section>
+</main>
 </Layout>
 

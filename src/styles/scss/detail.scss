@@ -1,6 +1,27 @@
 @charset "utf-8";
 @use '_common';
 
+.header-detail {
+	height: 50vh;
+}
+.catch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+	position: relative;
+	top: 35%;
+	height: 50vh;
+	@media (max-width: 800px) {
+		padding: 0 20px;
+	}
+	h1 {
+		color: #ffe300;
+		font-weight: 900;
+		font-size: 3em;
+	}
+}
+
 .blog-detail-title {
 	text-align: center;
 	margin-bottom: 50px;

@@ -1,6 +1,67 @@
 @charset "utf-8";
 @use '_common';
 
+.catch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+	position: relative;
+	top: 35%;
+	@media (max-width: 800px) {
+		padding: 0 20px;
+	}
+	path {
+		fill: #ffe300;
+		stroke: #ffe300;
+		stroke-dasharray: 400;
+		opacity: 10;
+		animation: animate1 3s cubic-bezier(0, 0.23, 1, .1);
+	}
+	@keyframes animate1 {
+		0% {
+			opacity: 0;
+			fill: none;
+			stroke-dashoffset: 400;
+		}
+		30% {
+			opacity: 10;
+			fill: none;
+			stroke-dashoffset: 400;
+		}
+		90% {
+			fill: rgba(255,227,0,0);
+		}
+		100% {
+			opacity: 10;
+			fill: rgba(255,227,0,1);
+			stroke-dashoffset: 0;
+		}
+
+	}
+}
+
+.skills-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	position: relative;
+	top: 45%;
+	li {
+		margin: 0 5px;
+		img {
+			width: 60px;
+			height: 60px;
+			object-fit: cover;
+			border-radius: 50%;
+			@media (max-width: 800px) {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
 
 .flex-box {
 	display: flex;

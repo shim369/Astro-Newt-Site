@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import HeaderDetail from '../../components/HeaderDetail.astro'
 import { newtClient } from '../../lib/newt'
 import type { Article } from '../../lib/newt'
 import '../../styles/css/detail.css';
@@ -22,6 +23,8 @@ const { article } = Astro.props
 ---
 
 <Layout title={`${article.title} | ASTRO BASE`}>
+	<HeaderDetail />
+	<main>
 	<section>
 		<div class="container">
 			<div class="blog-detail-area">
@@ -34,4 +37,5 @@ const { article } = Astro.props
 			</div>
 		</div>
 	</section>
+	</main>
 </Layout>
