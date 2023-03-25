@@ -1,6 +1,23 @@
 @charset "utf-8";
 @use '_common';
 
+header {
+	border-radius: 0 0 50% 50%;
+	animation: animate2 3s cubic-bezier(0, 0.23, 1, .1);
+	@media (max-width: 800px) {
+		border-radius: 0;
+	}
+	@keyframes animate2 {
+		0% {
+			background: #000;
+		}
+		100% {
+			background: transparent;
+		}
+
+	}
+}
+
 .catch {
 	display: flex;
 	justify-content: center;

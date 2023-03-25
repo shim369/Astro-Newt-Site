@@ -97,20 +97,6 @@ header {
 	z-index: 1;
 	position: relative;
 	transition: all .5s ease;
-	border-radius: 0 0 50% 50%;
-	animation: animate2 3s cubic-bezier(0, 0.23, 1, .1);
-	@media (max-width: 800px) {
-		border-radius: 0;
-	}
-	@keyframes animate2 {
-		0% {
-			background: #000;
-		}
-		100% {
-			background: transparent;
-		}
-
-	}
 	&.active {
 		border-radius: 0;
 		.header-inner {
