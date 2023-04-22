@@ -24,12 +24,12 @@ const { article } = Astro.props
 
 <Layout title={`${article.title} | ASTRO BASE`}>
 	<HeaderDetail />
-	<main>
+	<main class="bg-gray">
 	<section>
 		<div class="container">
 			<div class="blog-detail-area">
 				<div class="blog-detail-title">{article.category.name} Blog</div>	
-				<div class="blog-content bg-gray">
+				<div class="blog-content">
 				<h1>{article.title}</h1>
 				<div class="date"><span class="material-symbols-outlined">schedule</span>{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
 				<article set:html={article.body} />
