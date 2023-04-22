@@ -169,7 +169,7 @@ header {
 					width: 100%;
 					height: auto;
 					object-fit: contain;
-					transition: all .5s ease;
+					transition: all .3s ease;
 				}
 			}
 			.skills-text {
@@ -245,7 +245,7 @@ header {
 	padding: 10px 20px;
 	margin-top: 15px;
 	display: inline-block;
-	transition: all .5s ease;
+	transition: all .3s ease;
 	&:hover {
 		border: solid 1px #ffe300;
 		background-image: linear-gradient(to right bottom, #ffe300, #fde31e, #fbe42d, #fae439, #f8e443);
@@ -304,7 +304,7 @@ header {
 				padding: 10px 20px;
 				margin-top: 15px;
 				display: inline-block;
-				transition: all .5s ease;
+				transition: all .3s ease;
 				cursor: pointer;
 				&:hover {
 					border: solid 1px #000;
