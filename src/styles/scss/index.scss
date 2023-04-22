@@ -2,6 +2,7 @@
 @use '_common';
 
 header {
+	background: url("../img/bg1.webp") no-repeat;
 	border-radius: 0 0 50% 50%;
 	animation: animate2 3s cubic-bezier(0, 0.23, 1, .1);
 	@media (max-width: 800px) {
