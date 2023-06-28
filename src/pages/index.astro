@@ -108,8 +108,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 									</div>
 									<div class="date"><span class="material-symbols-outlined">schedule</span>
 									{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
-									<h2>{article.title}<br>
-									<a href={`/articles/${article.slug}`} class="btn-s" title={`${article.title}`}>Read more</a></h2>
+									<h2><a href={`/articles/${article.slug}`} class="btn-s">{article.title}</a></h2>
 								</div>
 							)
 						}
