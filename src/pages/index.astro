@@ -5,11 +5,12 @@ import Contact from '../components/Contact.astro'
 import { newtClient } from '../lib/newt'
 import type { Article } from '../lib/newt'
 import '../styles/css/index.css';
+
 const { items: articles } = await newtClient.getContents<Article>({
   appUid: 'blog',
   modelUid: 'article',
   query: {
-	select: ["title", "slug", "body", "coverImage", "category", "date"],
+    select: ["title", "slug", "body", "coverImage", "category", "date"],
   },
 })
 ---
@@ -117,19 +118,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 			</div>
 		</div>
 	</section>
-	<section class="bg-yellow" id="a04">
-		<div class="container">
-			<div class="contact">
-				<h1>Contact</h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-				<Contact />
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-				<div class="contact-logo">
-					ASTRO BASE
-				</div>
-			</div>
-		</div>
-	</section>
+	<Contact />
 </main>
 </Layout>
 
