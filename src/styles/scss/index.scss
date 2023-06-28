@@ -6,7 +6,7 @@ header {
 	background-size: cover;
 	background-position: center;
 	border-radius: 0 0 50% 50%;
-	animation: animate2 3s cubic-bezier(0, 0.23, 1, .1);
+	animation: animate2 1.5s cubic-bezier(0, 0.23, 1, .1);
 	@media (max-width: 800px) {
 		border-radius: 0;
 	}
@@ -68,7 +68,7 @@ header {
 	z-index: 3;
 	position: relative;
 	top: 45%;
-	animation: animate3 8s;
+	animation: animate3 2s;
 	@keyframes animate3 {
 		0% {
 			opacity: 0;
