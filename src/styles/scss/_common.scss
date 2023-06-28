@@ -305,50 +305,6 @@ header {
 	}
 }
 
-.blog-area {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 40px;
-	@media (max-width: 800px) {
-		flex-direction: column;
-	}
-	.blog-card {
-		width: 30%;
-		@media (max-width: 800px) {
-			width: 100%;
-			margin-bottom: 40px;
-		}
-		.img-category {
-			position: relative;
-			z-index: 0;
-			img {
-				width: 100%;
-				height: 200px;
-				margin-bottom: 25px;
-				object-fit: cover;
-			}
-			h3 {
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				left: 0;
-				background: #000;
-				color: #f4f4ec;
-				padding: 5px 10px;
-				font-size: 1em;
-			}
-		}
-		.date {
-			font-size: 1em;
-			margin-bottom: 15px;
-		}
-		h2 {
-			margin-bottom: 10px;
-			font-size: 1.2em;
-		}
-	}
-}
-
 .btn-s {
 	color: #f4f4ec;
 	border: solid 1px #f4f4ec;
