@@ -182,11 +182,18 @@ header {
 				width: 70%;
 				h2 {
 					margin-bottom: 10px;
+					@media (max-width: 800px) {
+						font-size: 1.1em;
+						margin-bottom: 5px;
+					}
 				}
 				p {
 					text-align: left;
 					font-size: 1em;
 					line-height: 1.5;
+					@media (max-width: 800px) {
+						font-size: .9em;
+					}
 				}
 			}
 		}
