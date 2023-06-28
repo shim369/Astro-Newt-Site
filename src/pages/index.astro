@@ -102,13 +102,15 @@ const { items: articles } = await newtClient.getContents<Article>({
 						if(article.category.name == "Astro"){
 							return (
 								<div class="blog-card">
+									<a href={`/articles/${article.slug}`}>
 									<div class="img-category">
 										<img src={article.coverImage ? article.coverImage.src : ""} />
 										<h3>{article.category.name}</h3>
 									</div>
 									<div class="date"><span class="material-symbols-outlined">schedule</span>
 									{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
-									<h2><a href={`/articles/${article.slug}`}>{article.title}</a></h2>
+									<h2>{article.title}</h2>
+									</a>
 								</div>
 							)
 						}
