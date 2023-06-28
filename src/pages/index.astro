@@ -104,7 +104,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 								<div class="blog-card">
 									<a href={`/articles/${article.slug}`}>
 									<div class="img-category">
-										<img src={article.coverImage ? article.coverImage.src : ""} />
+										<img src={article.coverImage ? article.coverImage.src : ""} alt={article.title} />
 										<h3>{article.category.name}</h3>
 									</div>
 									<div class="date"><span class="material-symbols-outlined">schedule</span>
