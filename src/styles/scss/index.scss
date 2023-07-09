@@ -9,6 +9,7 @@ header {
 	border-radius: 0 0 50% 50%;
 	@media (max-width: 800px) {
 		border-radius: 0;
+		animation: none;
 	}
 	@keyframes animate2 {
 		0% {
