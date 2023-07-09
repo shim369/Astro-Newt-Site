@@ -70,7 +70,10 @@ header {
 	z-index: 3;
 	position: relative;
 	top: 45%;
-	animation: animate3 2s;
+	opacity: 0;
+	animation: animate3 1s ease-in-out;
+	animation-delay: 1.3s;
+	animation-fill-mode: forwards;
 	@keyframes animate3 {
 		0% {
 			opacity: 0;
