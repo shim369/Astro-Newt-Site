@@ -5,17 +5,21 @@ header {
 	background: url("../img/bg1.webp") no-repeat;
 	background-size: cover;
 	background-position: center;
+	animation: animate2 1.5s ease-in-out;
 	border-radius: 0 0 50% 50%;
-	animation: animate2 1.5s cubic-bezier(0, 0.23, 1, .1);
 	@media (max-width: 800px) {
 		border-radius: 0;
 	}
 	@keyframes animate2 {
 		0% {
-			background: #000;
+			// background: #000;
+			opacity: 0;
+			border-radius: 0 0 0 0;
 		}
 		100% {
-			background: transparent;
+			// background: transparent;
+			opacity: 1;
+			border-radius: 0 0 50% 50%;
 		}
 
 	}
@@ -36,7 +40,7 @@ header {
 		stroke: #ffe300;
 		stroke-dasharray: 400;
 		opacity: 10;
-		animation: animate1 3s cubic-bezier(0, 0.23, 1, .1);
+		animation: animate1 1.5s cubic-bezier(0, 0.23, 1, .1);
 	}
 	@keyframes animate1 {
 		0% {
@@ -45,7 +49,6 @@ header {
 			stroke-dashoffset: 400;
 		}
 		30% {
-			opacity: 10;
 			fill: none;
 			stroke-dashoffset: 400;
 		}
@@ -53,7 +56,6 @@ header {
 			fill: rgba(255,227,0,0);
 		}
 		100% {
-			opacity: 10;
 			fill: rgba(255,227,0,1);
 			stroke-dashoffset: 0;
 		}
