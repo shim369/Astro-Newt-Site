@@ -16,8 +16,8 @@ const { title } = Astro.props;
 		<meta name="description" content={ title } />
 		<title>{ title }</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 	</head>
 	<body id="top">
 		<div class="wrapper">
@@ -48,4 +48,11 @@ let menuBtn = document.querySelector('.sp-nav-btn');
 menuBtn.addEventListener('click', () => {
 	body.classList.toggle('side-open');
 })
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<script is:inline>
+  window.onload = function() {
+	AOS.init();
+  };
 </script>
