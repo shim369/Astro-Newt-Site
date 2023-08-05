@@ -31,7 +31,7 @@ const { article } = Astro.props
 			<div class="blog-detail-area">
 				<div class="blog-content">
 				<h1>{article.title}</h1>
-				<div class="date"><span class="material-symbols-outlined">schedule</span>{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
+				<div class="date"><span class="material-icons-outlined">schedule</span>{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
 				<article set:html={article.body} />
 			</div>
 			</div>
