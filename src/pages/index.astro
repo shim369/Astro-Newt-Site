@@ -37,7 +37,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 		<div class="container">
 			<h1>Skills</h1>
 			<ul class="skills-detail">
-				<li data-aos="fade-up" data-aos-delay="100">
+				<li data-aos="fade-up" data-aos-delay="50">
 					<div class="skills-img">
 						<img src="img/astro.webp" alt="astro" width="100" height="100">
 					</div>
@@ -46,7 +46,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
 				</li>
-				<li data-aos="fade-up" data-aos-delay="200">
+				<li data-aos="fade-up" data-aos-delay="100">
 					<div class="skills-img">
 						<img src="img/js.webp" alt="js" width="100" height="100">
 					</div>
@@ -55,7 +55,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
 				</li>
-				<li data-aos="fade-up" data-aos-delay="300">
+				<li data-aos="fade-up" data-aos-delay="150">
 					<div class="skills-img">
 						<img src="img/next.webp" alt="next" width="100" height="100">
 					</div>
@@ -64,7 +64,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
 				</li>
-				<li data-aos="fade-up" data-aos-delay="400">
+				<li data-aos="fade-up" data-aos-delay="200">
 					<div class="skills-img">
 						<img src="img/nuxt.webp" alt="nuxt" width="100" height="100">
 					</div>
@@ -73,7 +73,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
 				</li>
-				<li data-aos="fade-up" data-aos-delay="500">
+				<li data-aos="fade-up" data-aos-delay="250">
 					<div class="skills-img">
 						<img src="img/py.webp" alt="python" width="100" height="100">
 					</div>
@@ -82,7 +82,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
 				</li>
-				<li data-aos="fade-up" data-aos-delay="600">
+				<li data-aos="fade-up" data-aos-delay="300">
 					<div class="skills-img">
 						<img src="img/figma.webp" alt="figma" width="100" height="100">
 					</div>
@@ -102,7 +102,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 					articles.map((article, index) => {
 						if(article.category.name == "Astro"){
 							return (
-								<div class="blog-card" data-aos="fade-up" data-aos-delay={index * 100}>
+								<div class="blog-card" data-aos="fade-up" data-aos-delay={index * 50}>
 									<a href={`/articles/${article.slug}`}>
 									<div class="img-category">
 										<img src={article.coverImage ? article.coverImage.src : ""} alt={article.title} width="403" height="200" />
