@@ -108,7 +108,7 @@ const { items: articles } = await newtClient.getContents<Article>({
 										<img src={article.coverImage ? article.coverImage.src : ""} alt={article.title} width="400" height="300" loading="lazy" />
 										<p>{article.category.name}</p>
 									</div>
-									<div class="date"><span class="material-icons-outlined">schedule</span>
+									<div class="date"><span class="material-icons schedule-icon">schedule</span>
 									{ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}</div>
 									<h2>{article.title}</h2>
 									</a>
