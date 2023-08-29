@@ -23,7 +23,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 			<h1>About</h1>
 			<div class="flex-box">
 				<div class="flex-img" data-aos="fade-up">
-					<img src="img/prof.webp" alt="prof" width="400" height="400">
+					<picture>
+					<source srcset="img/prof.webp" type="image/webp">
+					<img src="img/prof.jpg" alt="prof" width="300" height="300">
+					<picture>
 				</div>
 				<div class="flex-text" data-aos="fade-left">
 					<h2>Lorem ipsum dolor sit amet consectetur.</h2>
@@ -39,7 +42,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 			<ul class="skills-detail">
 				<li data-aos="fade-up" data-aos-delay="50">
 					<div class="skills-img">
-						<img src="img/astro.webp" alt="astro" width="100" height="100">
+						<picture>
+						<source srcset="img/astro.webp" type="image/webp">
+						<img src="img/astro.png" alt="astro" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>Astro</h2>
@@ -48,7 +54,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 				</li>
 				<li data-aos="fade-up" data-aos-delay="100">
 					<div class="skills-img">
-						<img src="img/js.webp" alt="js" width="100" height="100">
+						<picture>
+						<source srcset="img/js.webp" type="image/webp">
+						<img src="img/js.jpg" alt="js" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>JavaScript</h2>
@@ -57,7 +66,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 				</li>
 				<li data-aos="fade-up" data-aos-delay="150">
 					<div class="skills-img">
-						<img src="img/next.webp" alt="next" width="100" height="100">
+						<picture>
+						<source srcset="img/next.webp" type="image/webp">
+						<img src="img/next.png" alt="next.js" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>Next.js</h2>
@@ -66,7 +78,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 				</li>
 				<li data-aos="fade-up" data-aos-delay="200">
 					<div class="skills-img">
-						<img src="img/nuxt.webp" alt="nuxt" width="100" height="100">
+						<picture>
+						<source srcset="img/nuxt.webp" type="image/webp">
+						<img src="img/nuxt.png" alt="nuxt.js" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>Nuxt.js</h2>
@@ -75,7 +90,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 				</li>
 				<li data-aos="fade-up" data-aos-delay="250">
 					<div class="skills-img">
+						<picture>
+						<source srcset="img/py.webp" type="image/webp">
 						<img src="img/py.webp" alt="python" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>Python</h2>
@@ -84,7 +102,10 @@ const { items: articles } = await newtClient.getContents<Article>({
 				</li>
 				<li data-aos="fade-up" data-aos-delay="300">
 					<div class="skills-img">
-						<img src="img/figma.webp" alt="figma" width="100" height="100">
+						<picture>
+						<source srcset="img/figma.webp" type="image/webp">
+						<img src="img/figma.jpg" alt="figma" width="100" height="100">
+						<picture>
 					</div>
 					<div class="skills-text">
 						<h2>Figma</h2>
