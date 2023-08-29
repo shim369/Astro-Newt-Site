@@ -2,7 +2,7 @@
 @use '_common';
 
 header {
-	background: url("../img/bg1.webp") no-repeat;
+	background: url("../img/bg1.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
 	animation: animate2 1.5s ease-in-out;
@@ -13,12 +13,10 @@ header {
 	}
 	@keyframes animate2 {
 		0% {
-			// background: #000;
 			opacity: 0;
 			border-radius: 0 0 0 0;
 		}
 		100% {
-			// background: transparent;
 			opacity: 1;
 			border-radius: 0 0 50% 50%;
 		}
