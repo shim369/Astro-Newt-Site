@@ -71,9 +71,9 @@ export default function ContactForm() {
                 <button type="submit">Submit</button>
                 </div>
             </form>
-            <div className="contact-logo">
+              <div className="contact-logo">
                 ASTRO BASE
-                </div>
+              </div>
             </div>
         </div>
     </section>
