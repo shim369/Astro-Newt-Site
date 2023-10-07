@@ -50,6 +50,7 @@ export default function ContactForm() {
                     placeholder="Email"
                     id="email"
                     {...register('email', { required: 'Email is required' })}
+                    aria-describedby="error-email-required"
                 />
                 {errors?.email && (
                     <span id="error-email-required" aria-live="assertive">
@@ -60,6 +61,7 @@ export default function ContactForm() {
                     placeholder="Message"
                     id="message"
                     {...register('message', { required: 'Message is required' })}
+                    aria-describedby="error-message-required"
                 />
                 {errors?.message && (
                     <span id="error-message-required" aria-live="assertive">
