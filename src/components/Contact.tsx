@@ -19,30 +19,20 @@ export default function ContactForm() {
       formData.append(key, value);
     });
 
-    try {
-      const response = await fetch('https://shim.form.newt.so/v1/deCA6xMnK', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
-
-      if (response.ok) {
-        location.href = '/thanks';
-      } else {
-        location.href = '/error';
-      }
-    } catch (err) {
-      location.href = '/error';
-    }
+    await fetch('https://shim.form.newt.so/v1/deCA6xMnK', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
   });
 
   return (
     <section className="bg-yellow" id="a04">
       <div className="container">
         <div className="contact">
-          <h1>Contact</h1>
+      <h1>Contact us</h1>
           <form className="form-box" onSubmit={onSubmit}>
             <div className="form-item">
               <input
@@ -76,9 +66,9 @@ export default function ContactForm() {
                   {errors.message.message}
                 </span>
               )}
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+        <button type="submit">Submit</button>
+        </div>
+      </form>
           <div className="contact-logo">ASTRO BASE</div>
         </div>
       </div>
