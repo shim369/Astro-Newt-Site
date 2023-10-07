@@ -34,7 +34,16 @@ import ContactForm from './Contact'
               formData.append(key, value)
             })
   
-            await sendRequest(formData)
+            try {
+              const response = await sendRequest(formData)
+              if (response.ok) {
+                location.href = '/thanks'
+              } else {
+                location.href = '/error'
+              }
+            } catch (err) {
+              location.href = '/error'
+            }
           })
       })
     }
