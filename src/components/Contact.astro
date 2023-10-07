@@ -1,19 +1,51 @@
-<section class="bg-yellow" id="a04">
-    <div class="container">
-        <div class="contact">
-            <h1>Contact</h1>
-            <form class="form-box" action="https://shim.form.newt.so/v1/vUf_6rML6" method="post" data-aos="fade-up">
-                <div class="form-item">
-                    <input id="name" name="name" placeholder="Name" autocomplete="name" />
-                    <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" />
-                    <textarea id="message" name="message" placeholder="Message"></textarea>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-            <div class="contact-logo">
-                ASTRO BASE
-            </div>
-        </div>
-    </div>
-</section>
-
+---
+import ContactForm from './Contact'
+---
+<ContactForm client:load />
+<script
+  is:inline
+  src="https://www.google.com/recaptcha/api.js?render=6LdVjIEoAAAAAEp-0ct8BKhItURM3jjT8mG5iGS2&hl=ja"
+></script>
+<script>
+    const form = document.getElementById('form')
+    form?.addEventListener('submit', submitFormData)
+  
+    function submitFormData(event: Event) {
+      event.preventDefault()
+      grecaptcha.ready(() => {
+        grecaptcha
+          .execute('6LdVjIEoAAAAAEp-0ct8BKhItURM3jjT8mG5iGS2', { action: 'submit' })
+          .then(async (token) => {
+            const target = event.target as typeof event.target & {
+              name: { value: string }
+              email: { value: string }
+              message: { value: string }
+            }
+  
+            const data = {
+              name: target.name.value,
+              email: target.email.value,
+              message: target.message.value,
+              googleReCaptchaToken: token,
+            }
+  
+            const formData = new FormData()
+            Object.entries(data).forEach(([key, value]) => {
+              formData.append(key, value)
+            })
+  
+            await sendRequest(formData)
+          })
+      })
+    }
+  
+    async function sendRequest(formData: FormData) {
+      return await fetch('https://shim.form.newt.so/v1/deCA6xMnK', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+    }
+  </script>
