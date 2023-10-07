@@ -1,7 +1,36 @@
 ---
-import ContactForm from './Contact'
+// import ContactForm from './Contact'
 ---
-<ContactForm client:load />
+<section class="bg-yellow" id="a04">
+  <div class="container">
+      <div class="contact">
+      <h1>Contact</h1>
+      <form class="form-box" id="form">
+          <div class="form-item">
+          <input
+              placeholder="Name"
+              id="name"
+          />
+          <input
+              placeholder="Email"
+              id="email"
+          />
+          <textarea
+              placeholder="Message"
+              id="message"
+          />
+          <button type="submit">Submit</button>
+          </div>
+      </form>
+      <p class="reCAPTCHA">This site is protected by reCAPTCHA and the Google<br />
+<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+<a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+      <div class="contact-logo">
+          ASTRO BASE
+          </div>
+      </div>
+  </div>
+</section>
 <script
   is:inline
   src="https://www.google.com/recaptcha/api.js?render=6LdVjIEoAAAAAEp-0ct8BKhItURM3jjT8mG5iGS2&hl=ja"

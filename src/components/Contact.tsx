@@ -33,7 +33,7 @@ export default function ContactForm() {
         <div className="container">
             <div className="contact">
             <h1>Contact</h1>
-            <form className="form-box" onSubmit={onSubmit}>
+            <form className="form-box" id="form">
                 <div className="form-item">
                 <input
                     placeholder="Name"
