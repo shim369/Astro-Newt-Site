@@ -44,33 +44,27 @@ export default function ContactForm() {
                 {...register('name', { required: 'Name is required' })}
                 aria-describedby="error-name-required"
               />
-              {errors?.name && (
-                <span id="error-name-required" aria-live="assertive">
-                  {errors.name.message}
-                </span>
-              )}
+              <span id="error-name-required" aria-live="assertive">
+                {errors?.name && errors.name.message}
+              </span>
               <input
                 placeholder="Email"
                 id="email"
                 {...register('email', { required: 'Email is required' })}
                 aria-describedby="error-email-required"
               />
-              {errors?.email && (
-                <span id="error-email-required" aria-live="assertive">
-                  {errors.email.message}
-                </span>
-              )}
+              <span id="error-email-required" aria-live="assertive">
+                {errors?.email && errors.email.message}
+              </span>
               <textarea
                 placeholder="Message"
                 id="message"
                 {...register('message', { required: 'Message is required' })}
                 aria-describedby="error-message-required"
               />
-              {errors?.message && (
-                <span id="error-message-required" aria-live="assertive">
-                  {errors.message.message}
-                </span>
-              )}
+              <span id="error-message-required" aria-live="assertive">
+                {errors?.message && errors.message.message}
+              </span>
               <button type="submit">Submit</button>
             </div>
           </form>
